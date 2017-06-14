@@ -45,8 +45,7 @@ def channel_get_members(name,timeout=5):
         if "CHAT_ADMIN_REQUIRED" in potorro[0]:
             print("YOU HAVE NO POWER HERE. Tsss. Evil. NotAnAdmin")
             return []
-        else:
-            return channel_get_members(name,timeout-1)
+        return channel_get_members(name,timeout-1)
 
 
 j_dialog = json.loads(json.dumps(dialog_list()))
